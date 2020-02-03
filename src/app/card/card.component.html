@@ -1,0 +1,29 @@
+<div class="container">
+    <h1 class="text-center">On Your CarT</h1>
+
+    <!-- <table border="2" style="font-style: normal;font-size: medium;"> -->
+    <table class="table table-bordered">
+        <tr>
+            <th>Categories</th>
+            <th>pizza name</th>
+            <th>price</th>
+            <th>Images</th>
+            <th>Quantity</th>
+            <th>Remove Item</th>
+        </tr>
+
+        <ng-container *ngFor='let e of temp;let i=index'>
+            <tr *ngIf='e.user==crnt'>
+                <td> {{e.categories}}</td>
+                <td> {{e.pizzaname}}</td>
+                <td> {{e.price|currency:'INR':true}}</td>
+                <td> <img [src]=e.addphoto height="150px" width="250px"> </td>
+                <td> <input type="number" placeholder="Enter total item" [value]=e.qty
+                        (input)="tp($event.target.value,i)"></td>
+                <td><button class="btn btn-danger" (click)="remove(i)">Remove</button></td>
+            </tr>
+        </ng-container>
+    </table>
+</div>
+
+<button class="btn btn-success" style="margin-left: 700px;width:200px;" (click)="place()">PlaceOrder

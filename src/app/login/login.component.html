@@ -1,0 +1,44 @@
+
+<div [ngStyle]="{background: 'url(assets/banner.jpg)'}"> 
+
+<br><br>
+<div class="container">
+    <!-- <div> <h1 class="text-center"> Login-Form</h1>
+</div> -->
+
+
+    <h1>f<span>oo</span>d c<span>o</span>urt l<span>o</span>g<span>in</span> f<span>o</span>rm</h1>
+	<div class="wthree-form">
+            <h2>Fill out the form below to login</h2>
+            <br>
+	
+
+
+<form [formGroup]="loginform" (ngSubmit)="sat()">
+    <div class="form-group" >
+        <label class="anim" >   <span>  Username  : <input type="text" class="form-control" formControlName="uname" placeholder="Enter Username" ></span> </label>
+        
+       
+</div>
+<div class="form-group" >
+    <label class="anim" > <span>Password : 
+                    <input type="text" class="form-control" formControlName="password" placeholder="Enter Password"></span></label>
+    
+    
+</div>
+<!-- <label class="anim">
+    <input type="checkbox" class="checkbox">
+    <span>Remember Me</span> 
+</label> -->
+
+<div class="submit-agileits">
+<button type="submit"   class="btn btn-primary"> Login </button>
+</div>
+<a (click)="go()"> &nbsp;&nbsp;<u>create an account</u></a>
+
+
+</form>
+
+</div>
+<br><br><br><br><br><br>
+</div>

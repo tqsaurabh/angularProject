@@ -1,0 +1,8 @@
+body{
+    
+    background: url("/assets/page_not_found.jpg");
+    padding-top: 50px;
+    padding-bottom: 100px;
+    
+    background-size:cover;
+}

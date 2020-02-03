@@ -1,0 +1,45 @@
+<div class="container">
+    <div> <h1 class="text-center"> Add Pizza</h1>
+</div>
+<form [formGroup]="Addpizza" >
+    
+    <div class="form-group"><small class="text-danger"> *</small>
+        <label>Categories</label>
+    <select  class="form-control" formControlName="categories" >
+        <option value="" disabled selected>select categorie</option>
+        <option value="Veg">Veg</option>
+        <option value="Non veg">Non veg</option>
+    </select>
+    </div>
+   
+
+    <!-- <div class="form-group">
+        <small class="text-danger"> *</small> <label> Categories </label>
+<input type="text" class="form-control"  name="categories"  formControlName="categories">
+
+</div> -->
+
+<div class="form-group">
+    <small class="text-danger"> *</small>  <label> Pizza Name </label>
+<input type="text" required class="form-control" formControlName="pizzaname" placeholder="Enter Pizza Name">
+</div>
+
+<div class="form-group">
+    <small class="text-danger"> *</small> <label> Price (Inc. all taxes) </label>
+<input type="text" class="form-control" formControlName="price" placeholder="Enter Price ₹">
+</div>
+
+
+
+
+<div class="example-button-row">
+    <small class="text-danger"> *</small> <label>Add Photo</label><br>
+    <input type="file"  #image accept="addphoto/*"
+      (change)="onFileSelected($event.target.files)">
+</div><br>
+
+<button type="button" (click)="add()" class="btn btn-primary"> Add </button>
+
+</form>
+</div>
+

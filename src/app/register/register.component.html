@@ -1,0 +1,77 @@
+
+    <div [ngStyle]="{background: 'url(assets/b3.jpg)'}"> 
+        <br>
+        <!-- <div class="container"> -->
+        <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h3>Register Form</h3>
+                <form [formGroup]="registerForm">
+                    <!-- <div class="form-group">
+                        <label>User Name</label>
+                        <input type="text" formControlName="uname" placeholder="Enter User Name"
+                         class="form-control" />
+                         <div *ngIf="submitted && registerForm.uname.errors">
+                            <div *ngIf="registerForm.uname.errors.required">User Name is required</div>
+                        </div>
+                    </div> -->
+
+
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" class="form-control" formControlName="uname">
+                    </div>
+            
+                    <div class="form-group">
+                        <label>Gender</label>
+                    <select class="form-control" formControlName="gender">
+                        <option value="" disabled selected>select gender</option>
+                        <option value="male" >male</option>
+                        <option value="female">female</option>
+                    </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" formControlName="password" placeholder="Enter Password" class="form-control"/>
+                        <!-- <div *ngIf="submitted && registerForm.password.errors">
+                            <div *ngIf="registerForm.password.errors.required">Password is required</div>
+                            <div *ngIf="registerForm.password.errors.minlength">Password must be at least 6 characters</div>
+                        </div>-->
+                    </div> 
+                    
+                    <div class="form-group">
+                        <label>Mobile No</label>
+                        <input type="text" formControlName="mobileno" placeholder="Enter Mobile Number"class="form-control" />
+                        <!-- <div *ngIf="submitted && registerForm.mobileno.errors" >
+                            <div *ngIf="registerForm.mobileno.errors.required">mobileno is required</div>
+                            <div *ngIf="registerForm.mobileno.errors.email">mobileno must be a valid</div>
+                        </div> -->
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" formControlName="email" placeholder="Enter Email" class="form-control" />
+                        <!-- <div *ngIf="submitted && registerForm.email.errors">
+                            <div *ngIf="registerForm.email.errors.required">Email is required</div>
+                            <div *ngIf="registerForm.email.errors.email">Email must be a valid email address</div>
+                        </div> -->
+                    </div>
+                          
+                    <div class="form-group">
+                        <label> Address </label>
+                    <input type="text" class="form-control" formControlName="address" placeholder="Enter Address">
+                    </div>
+                    
+                    <div class="form-group">
+                        <button class="btn btn-primary"  (click)="onSubmit()">Register</button>
+                        <span> Already Registered <a (click)="go()"><u>Login</u></a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
+
+
+
+<!-- <h1>{{msg |json}}</h1> -->

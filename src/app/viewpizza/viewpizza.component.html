@@ -1,0 +1,30 @@
+
+
+
+<div class="container">
+    <h1 class="text-center">view data</h1>
+<table class="table table-bordered">
+    <tr>
+     
+    <!-- <th>id</th> -->
+    <th>Categories</th>
+    <th>pizza name</th>
+    <th>price</th>
+    <th>Images</th>
+    <th>Action</th>
+    </tr >
+    
+        <tr *ngFor='let e of pizza;let i=index'>
+               
+    <!-- <td> {{e.id}}</td> -->
+    <td> {{e.categories}}</td>
+    <td> {{e.pizzaname}}</td>
+    <td> {{e.price|currency:'INR':true}}</td>
+    <td> <img [src]=e.addphoto height="150px" width="250px"> </td>
+    <td><button class="btn btn-dark"><a [routerLink]="['/update',i]">Edit</a></button>
+        <button class="btn btn-danger" (click)="delete(i)">Delete</button>
+     </td>
+    </tr>
+    
+    </table>
+</div>
